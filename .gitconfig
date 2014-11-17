@@ -1,0 +1,31 @@
+# .gitconfig
+
+[alias]
+	br = branch
+	ci = commit
+	co = checkout
+	f = fetch
+	k = !gitk
+	st = status
+	unstage = reset HEAD --
+[core]
+	autocrlf = input
+	eol = lf
+	safecrlf = true
+[branch]
+	autosetuprebase = always
+[diff]
+	renames = copies
+	renameLimit = 20000
+[merge]
+	tool = gvimdiff
+	conflictstyle = diff3
+[mergetool]
+	keepBackup = false
+[push]
+	default = simple
+[user]
+	name = Kurt Glastetter
+	email = kurtglastetter@gmail.com
+
+# vim: noet:sts=8:sw=8:ts=8:tw=79

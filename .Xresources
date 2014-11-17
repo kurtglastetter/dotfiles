@@ -1,0 +1,47 @@
+! .Xresources
+
+XTerm*scrollBar: True
+XTerm*visualBell: False
+XTerm*loginShell: True
+
+!XTerm*underLine: on
+XTerm*colorMode: on
+XTerm*colorBD: lightyellow
+!XTerm*colorBDMode: off
+XTerm*colorUL: yellow
+XTerm*colorULMode: on
+XTerm*dynamicColors: off
+XTerm*highlightSelection: true
+
+XTerm*geometry: 120x30
+
+!------------------------------------------------------------------------------
+! Colorscheme based on the gvim colorscheme desert
+!------------------------------------------------------------------------------
+XTerm*background: #313031
+XTerm*foreground: #ffffff
+
+! black
+XTerm*color0:   #000000
+XTerm*color8:   #666666
+! red
+XTerm*color1:   #ffa2a5
+XTerm*color9:   #cf6171
+! green
+XTerm*color2:   #bdb66b
+XTerm*color10:  #c5f779
+! yellow
+XTerm*color3:   #f7e78c
+XTerm*color11:  #fff796
+! blue
+XTerm*color4:   #84cfef
+XTerm*color12:  #4186be
+! magenta
+XTerm*color5:   #ce5d5a
+XTerm*color13:  #cf9ebe
+! cyan
+XTerm*color6:   #87ff87
+XTerm*color14:  #71bebe
+! white
+XTerm*color7:   #bebebe
+XTerm*color15:  #ffffff
