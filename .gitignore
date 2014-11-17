@@ -1,12 +1,12 @@
-*
+/*
 
 !/.Xresources
 !/.bash_profile
 !/.bashrc
 !/.config/
-!/.config/git/
-!/.config/git/ignore
-!/.git*
+!/.gitattributes
+!/.gitignore
+!/.gitmodules
 !/.gvimrc
 !/.profile
 !/.vimrc
