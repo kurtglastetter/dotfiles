@@ -3,6 +3,9 @@
 !/.Xresources
 !/.bash_profile
 !/.bashrc
+!/.config/
+!/.config/git/
+!/.config/git/ignore
 !/.git*
 !/.gvimrc
 !/.profile
