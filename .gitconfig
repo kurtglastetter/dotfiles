@@ -8,6 +8,7 @@
 	k = !gitk
 	st = status
 	unstage = reset HEAD --
+	x = !gitx
 [core]
 	autocrlf = input
 	eol = lf
