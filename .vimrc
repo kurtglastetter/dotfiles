@@ -9,6 +9,7 @@ set   autowrite
 set   hidden
 set   hlsearch
 set   ignorecase
+set   number
 set nowrap
 
 set modelines=5
