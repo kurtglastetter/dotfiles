@@ -13,7 +13,7 @@ XTerm*colorULMode: on
 XTerm*dynamicColors: off
 XTerm*highlightSelection: true
 
-XTerm*geometry: 120x30
+XTerm*geometry: 117x40
 
 !------------------------------------------------------------------------------
 ! Colorscheme based on the gvim colorscheme desert
