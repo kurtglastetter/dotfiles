@@ -102,4 +102,6 @@ fi
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+eval "$(chef shell-init bash)"
+
 # vim: et:sts=2:sw=2:ts=8:tw=79
