@@ -1,5 +1,12 @@
 # .bashrc
 
+PKGROOT_GIT=$(dirname $(dirname $(which git)))
+PKGROOT_SVN=$(dirname $(dirname $(which svn)))
+
+. $PKGROOT_GIT/etc/bash_completion.d/git-completion.bash
+. $PKGROOT_GIT/etc/bash_completion.d/git-prompt.sh
+. $PKGROOT_SVN/etc/bash_completion.d/subversion
+
 txtblk='\033[0;30m' # Black - Regular
 txtred='\033[0;31m' # Red
 txtgrn='\033[0;32m' # Green
@@ -86,6 +93,15 @@ if [ "$PS1" ]; then
   #PS1="$PS1"' \D{%Z}'
   PS1="$PS1$ps1_txtrst"
   PS1="$PS1"' '"$ps1_txtylw"'\w'
+  PS1="$PS1$ps1_txtrst"
+
+  GIT_PS1_SHOWDIRTYSTATE=1
+  GIT_PS1_SHOWSTASHSTATE=
+  GIT_PS1_SHOWUNTRACKEDFILES=1
+  GIT_PS1_SHOWUPSTREAM=
+  GIT_PS1_DESCRIBE_STYLE=
+  GIT_PS1_SHOWCOLORHINTS=
+  PS1="$PS1$ps1_txtcyn"'$(__git_ps1 " (%s)")'
   PS1="$PS1$ps1_txtrst"
   PS1="$PS1"'\n\$ '
 
