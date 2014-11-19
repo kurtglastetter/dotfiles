@@ -17,7 +17,16 @@ set tabstop=8
 set visualbell t_vb=
 set wildmode=longest,list
 
+" swap files
 set directory=.,~/tmp,$TMPDIR,/var/tmp,/tmp
+
+" backups
+set   backup
+set   writebackup
+set backupcopy=auto
+set backupdir=~/tmp,$TMPDIR,/var/tmp,/tmp
+set backupext=~
+set patchmode=.orig
 
 if &diff
     colo eclipse
