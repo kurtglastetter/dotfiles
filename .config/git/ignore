@@ -114,5 +114,6 @@ $RECYCLE.BIN/
 # General
 #
 *.bak
+*.orig
 *.tmp
 *~
