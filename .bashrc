@@ -1,5 +1,41 @@
 # .bashrc
 
+wrap_cmd_str_arg () {
+  local output=
+  if [[ "$1" =~ "'" ]]; then
+    # contains single quotes; surround in double-quotes, quoting any existing
+    # double-quotes or backslashes
+    output='"'$(<<<"$1" sed 's/\(["\\]\)/\\\1/g')'"'
+  elif [[ "$1" =~ [^+\-./0-9:=@A-Z^_a-z] ]]; then
+    # contains other characters that need quoting; surround in single quotes
+    output="'$1'"
+  else
+    output="$1"
+  fi
+  echo -n "$output"
+}
+
+wrap_cmd_str () {
+  wrap_cmd_str_arg "$1"
+  shift
+  for a in "$@"; do
+    echo -n ' '
+    wrap_cmd_str_arg "$a"
+  done
+  echo ''
+}
+
+wrap () {
+  local wrap_cmd_str=$(wrap_cmd_str "$@")
+  echo >&2 "    [$wrap_cmd_str]"
+  "$@"
+  local errno=$?
+  if [ $errno -ne 0 ]; then
+    echo >&2 "*** [$wrap_cmd_str] Error $errno"
+  fi
+  return $errno
+}
+
 PKGROOT_GIT=$(dirname $(dirname $(which git)))
 PKGROOT_SVN=$(dirname $(dirname $(which svn)))
 
