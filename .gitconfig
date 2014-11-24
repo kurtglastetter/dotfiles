@@ -9,6 +9,8 @@
 	st = status
 	unstage = reset HEAD --
 	x = !gitx
+[color]
+	ui = auto
 [core]
 	autocrlf = input
 	eol = lf
