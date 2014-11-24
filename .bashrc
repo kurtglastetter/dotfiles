@@ -75,6 +75,12 @@ ps1_bakcyn='\[\033[46m\]'   # Cyan
 ps1_bakwht='\[\033[47m\]'   # White
 ps1_txtrst='\[\033[0m\]'    # Text Reset
 
+if [ "$EUID" -eq 0 ]; then
+  ps1_usrclr="$ps1_txtylw"
+else
+  ps1_usrclr="$ps1_txtgrn"
+fi
+
 smiley () {
   case $? in
     0) echo -e "$txtgrn"':)'"$txtrst" ;;
@@ -85,12 +91,15 @@ smiley () {
 
 if [ "$PS1" ]; then
   PS1="$ps1_txtrst\\n"
-  PS1="$PS1$ps1_txtgrn\u@\h$ps1_txtrst"
-  #PS1="$PS1"" $(uname)"
+  PS1="$PS1$ps1_usrclr\u"
+  PS1="$PS1$ps1_txtrst"
+  PS1="$PS1$ps1_txtgrn@\h"
+  PS1="$PS1"" $(uname)"
+  PS1="$PS1$ps1_txtrst"
   PS1="$PS1"' $(smiley)'
   PS1="$PS1$ps1_txtblu"' \D{%F}'
   PS1="$PS1"' \T'
-  #PS1="$PS1"' \D{%Z}'
+  PS1="$PS1"' \D{%Z}'
   PS1="$PS1$ps1_txtrst"
   PS1="$PS1"' '"$ps1_txtylw"'\w'
   PS1="$PS1$ps1_txtrst"
@@ -103,17 +112,11 @@ if [ "$PS1" ]; then
   GIT_PS1_SHOWCOLORHINTS=
   PS1="$PS1$ps1_txtcyn"'$(__git_ps1 " (%s)")'
   PS1="$PS1$ps1_txtrst"
-  PS1="$PS1"'\n\$ '
 
-  # /usr/local/opt/bash-git-prompt
-  #if [ -f "$(brew --prefix bash-git-prompt)/share/gitprompt.sh" ]; then
-  #  GIT_PROMPT_THEME=Default
-  #  source "$(brew --prefix bash-git-prompt)/share/gitprompt.sh"
-  #fi
+  PS1="$PS1"'\n\$ '
 
   # note: do not export PS1; it is just for this shell, not child shells
 fi
-
 
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
