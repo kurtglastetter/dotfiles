@@ -1,5 +1,13 @@
 # .bashrc
 
+# improved history handling
+shopt -s histappend
+HISTSIZE=$((1024*1024))
+HISTFILESIZE=$((32*HISTSIZE))
+HISTCONTROL=ignoreboth
+HISTIGNORE='ls:bg:fg:history:pwd:git status:git log'
+PROMPT_COMMAND='history -a'
+
 wrap_cmd_str_arg () {
   local output=
   if [[ "$1" =~ "'" ]]; then
