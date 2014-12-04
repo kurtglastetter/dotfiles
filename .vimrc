@@ -35,6 +35,7 @@ else
 endif
 
 autocmd FileType  gitconfig  set noet sts=8 sw=8 ts=8
+autocmd FileType  groovy     set et sts=4 sw=4 ts=8
 "autocmd FileType  java       set   et sts=4 sw=4 ts=8
 "autocmd FileType  java       set noet sts=4 sw=4 ts=4
 autocmd FileType  ps1        set   et sts=2 sw=2 ts=8
