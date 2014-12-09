@@ -26,7 +26,7 @@ set   writebackup
 set backupcopy=auto
 set backupdir=~/tmp,$TMPDIR,/var/tmp,/tmp
 set backupext=~
-set patchmode=.orig
+set patchmode=
 
 if &diff
     colo eclipse
