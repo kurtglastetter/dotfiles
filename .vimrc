@@ -39,6 +39,7 @@ autocmd FileType  groovy     set et sts=4 sw=4 ts=8
 autocmd FileType  html       set   et sts=2 sw=2 ts=8
 "autocmd FileType  java       set   et sts=4 sw=4 ts=8
 "autocmd FileType  java       set noet sts=4 sw=4 ts=4
+autocmd FileType  markdown   set   et sts=4 sw=4 ts=8 tw=72
 autocmd FileType  ps1        set   et sts=2 sw=2 ts=8
 "autocmd FileType  ruby       set noet sts=4 sw=4 ts=4
 autocmd FileType  ruby       set   et sts=2 sw=2 ts=8
