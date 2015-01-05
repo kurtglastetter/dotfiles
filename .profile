@@ -7,6 +7,10 @@ export LC_ALL=C
 export LESS=-FIRX
 export MAVEN_HOME=/usr/local/opt/maven/libexec
 
+MANPATH=`man -w`
+MANPATH="$MANPATH":/usr/local/opt/erlang/lib/erlang/man
+export MANPATH
+
 if [ -d "$HOME/bin" ]; then
   export PATH="$HOME/bin:$PATH"
 fi
