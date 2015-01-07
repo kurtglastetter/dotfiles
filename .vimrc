@@ -34,6 +34,7 @@ else
     colo desert
 endif
 
+autocmd FileType  erlang     set noet sts=4 sw=4 ts=8
 autocmd FileType  gitconfig  set noet sts=8 sw=8 ts=8
 autocmd FileType  groovy     set   et sts=4 sw=4 ts=8
 autocmd FileType  html       set   et sts=2 sw=2 ts=8
