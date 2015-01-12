@@ -58,4 +58,27 @@ nnoremap \sT :%s/\v\s+$//<lf>
 nnoremap \sl :s/\v^\s+//<lf>
 nnoremap \st :s/\v\s+$//<lf>
 
+" Note: The '%f%[/]%#' sequence is a hack to force '%f' to only match filenames
+" using the 'isfname' setting, which requires a following '%' according to the
+" 'errorformat' help doc.  '%[/]%#' is just a safe way to include the '%'.
+let &errorformat=
+  \   '%*[^"]"%f%[/]%#"%*\D%l: %m'
+  \. ',"%f%[/]%#"%*\D%l: %m'
+  \. ',%-G%f%[/]%#:%l: (Each undeclared identifier is reported only once'
+  \. ',%-G%f%[/]%#:%l: for each function it appears in.)'
+  \. ',%-GIn file included from %f%[/]%#:%l:%c'
+  \. ',%-GIn file included from %f%[/]%#:%l'
+  \. ',%-Gfrom %f%[/]%#:%l:%c'
+  \. ',%-Gfrom %f%[/]%#:%l'
+  \. ',%f%[/]%#:%l:%c:%m'
+  \. ',%f%[/]%#(%l):%m'
+  \. ',%f%[/]%#:%l:%m'
+  \. ',"%f%[/]%#"\, line %l%*\D%c%*[^ ] %m'
+  \. ',%D%*\a[%*\d]: Entering directory `%f%[/]%#'."'"
+  \. ',%X%*\a[%*\d]: Leaving directory `%f%[/]%#'."'"
+  \. ',%D%*\a: Entering directory `%f%[/]%#'."'"
+  \. ',%X%*\a: Leaving directory `%f%[/]%#'."'"
+  \. ',%DMaking %*\a in %f%[/]%#'
+  \. ',%f%[/]%#|%l| %m'
+
 " vim: et:sts=4:sw=4:ts=8:tw=79
