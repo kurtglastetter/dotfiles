@@ -28,6 +28,9 @@ set backupdir=~/tmp,$TMPDIR,/var/tmp,/tmp
 set backupext=~
 set patchmode=
 
+" file search path
+set path^=.,,
+
 if &diff
     colo eclipse
 else
