@@ -8,7 +8,6 @@
 	k = !gitk
 	st = status
 	unstage = reset HEAD --
-	x = !gitx
 [color]
 	ui = auto
 [core]
