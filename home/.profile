@@ -7,8 +7,12 @@ export LC_ALL=C
 export LESS=-FIRX
 export MAVEN_HOME=/usr/local/opt/maven/libexec
 
+PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
+
 if [ -d "$HOME/bin" ]; then
-  export PATH="$HOME/bin:$PATH"
+  PATH="$HOME/bin:$PATH"
 fi
+
+export PATH
 
 # vim: et:sts=2:sw=2:ts=8:tw=79
