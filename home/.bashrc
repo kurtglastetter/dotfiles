@@ -44,6 +44,10 @@ wrap () {
   return $errno
 }
 
+if [ -f ~/.homesick/repos/homeshick/homeshick.sh ]; then
+  . ~/.homesick/repos/homeshick/homeshick.sh
+fi
+
 PKGROOT_GIT=$(dirname $(dirname $(which git)))
 
 . $PKGROOT_GIT/etc/bash_completion.d/git-completion.bash
