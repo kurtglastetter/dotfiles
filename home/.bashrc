@@ -45,11 +45,9 @@ wrap () {
 }
 
 PKGROOT_GIT=$(dirname $(dirname $(which git)))
-PKGROOT_SVN=$(dirname $(dirname $(which svn)))
 
 . $PKGROOT_GIT/etc/bash_completion.d/git-completion.bash
 . $PKGROOT_GIT/etc/bash_completion.d/git-prompt.sh
-. $PKGROOT_SVN/etc/bash_completion.d/subversion
 
 txtblk='\033[0;30m' # Black - Regular
 txtred='\033[0;31m' # Red
