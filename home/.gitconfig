@@ -11,9 +11,7 @@
 [color]
 	ui = auto
 [core]
-	autocrlf = input
-	eol = lf
-	safecrlf = true
+	autocrlf = false
 [branch]
 	autosetuprebase = always
 [diff]
