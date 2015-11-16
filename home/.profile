@@ -12,7 +12,7 @@ if [ -f ~/.brew_gh_api_token ]; then
 fi
 
 PATH=/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
-PATH="$HOME"/.go/bin:"$PATH"
+PATH="$GOPATH"/bin:"$PATH"
 
 if [ -d "$HOME/bin" ]; then
   PATH="$HOME/bin:$PATH"
