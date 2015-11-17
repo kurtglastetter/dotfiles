@@ -164,6 +164,10 @@ if [ "$PS1" ]; then
   # note: do not export PS1; it is just for this shell, not child shells
 fi
 
+alias la='ls -a'
+alias ll='ls -l'
+alias lla='ls -la'
+
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
