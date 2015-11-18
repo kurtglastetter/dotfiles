@@ -26,6 +26,8 @@ set   writebackup
 set backupcopy=auto
 set backupdir=~/tmp,$TMPDIR,/var/tmp,/tmp
 set backupext=~
+let &backupskip .= ',' . escape(expand('$HOME'), '\') . '/.aws/*'
+let &backupskip .= ',' . escape(expand('$HOME'), '\') . '/.ssh/*'
 set patchmode=
 
 " file search path
