@@ -31,6 +31,9 @@ set patchmode=
 " file search path
 set path^=.,,
 
+" grep
+set grepprg=grep\ -EHIirn\ $*\ *
+
 if &diff
     colo eclipse
 else
@@ -53,7 +56,11 @@ autocmd FileType  xml        set   et sts=2 sw=2 ts=8
 
 nnoremap \: 0y$:<c-r>"<lf>
 nnoremap \\ :noh<lf>
+
+nnoremap \g *N:grep '<c-r>/'<lf>
+
 nnoremap \m /\v^([<\|=>])\1{6}(\s.*)?$/<lf>
+
 nnoremap \sL :%s/\v^\s+//<lf>
 nnoremap \sT :%s/\v\s+$//<lf>
 nnoremap \sl :s/\v^\s+//<lf>
