@@ -1,6 +1,9 @@
 [submodule "home/.vim/bundle/AnsiEsc.vim"]
 	path = home/.vim/bundle/AnsiEsc.vim
 	url = git@github.com:vim-scripts/AnsiEsc.vim.git
+[submodule "home/.vim/bundle/groovy.vim"]
+	path = home/.vim/bundle/groovy.vim
+	url = git@github.com:vim-scripts/groovy.vim
 [submodule "home/.vim/bundle/syntastic"]
 	path = home/.vim/bundle/syntastic
 	url = git@github.com:scrooloose/syntastic.git
