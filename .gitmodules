@@ -22,6 +22,9 @@
 [submodule "home/.vim/bundle/vim-go"]
 	path = home/.vim/bundle/vim-go
 	url = git@github.com:fatih/vim-go.git
+[submodule "home/.vim/bundle/vim-gradle"]
+	path = home/.vim/bundle/vim-gradle
+	url = git@github.com:tfnico/vim-gradle.git
 [submodule "home/.vim/bundle/vim-projectionist"]
 	path = home/.vim/bundle/vim-projectionist
 	url = git://github.com/tpope/vim-projectionist.git
