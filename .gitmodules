@@ -31,6 +31,9 @@
 [submodule "home/.vim/bundle/vim-projectionist"]
 	path = home/.vim/bundle/vim-projectionist
 	url = git://github.com/tpope/vim-projectionist.git
+[submodule "home/.vim/bundle/vim-ps1"]
+	path = home/.vim/bundle/vim-ps1
+	url = git@github.com:PProvost/vim-ps1.git
 [submodule "home/.vim/bundle/vim-scriptease"]
 	path = home/.vim/bundle/vim-scriptease
 	url = git@github.com:tpope/vim-scriptease.git
