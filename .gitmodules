@@ -9,7 +9,7 @@
 	url = git@github.com:markcornick/vim-bats.git
 [submodule "home/.vim/bundle/vim-colorschemes"]
 	path = home/.vim/bundle/vim-colorschemes
-	url = https://github.com/flazz/vim-colorschemes.git
+	url = git@github.com:flazz/vim-colorschemes.git
 [submodule "home/.vim/bundle/vim-dispatch"]
 	path = home/.vim/bundle/vim-dispatch
 	url = git@github.com:tpope/vim-dispatch.git
