@@ -20,4 +20,8 @@ fi
 
 export PATH
 
+if [ -d "$TMPDIR" ]; then
+  ln -snf "$TMPDIR" ~/tmp
+fi
+
 # vim: et:sts=2:sw=2:ts=8:tw=79
