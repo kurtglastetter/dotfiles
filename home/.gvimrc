@@ -1,5 +1,6 @@
 " .gvimrc
 
+set cursorline
 set guifont=Monaco:h10
 set visualbell t_vb=
 
