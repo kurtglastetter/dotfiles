@@ -4,7 +4,7 @@ export CLICOLOR=1
 export EDITOR=vim
 export GOPATH="$HOME"/.go
 export LC_ALL=C
-export LESS=-FIRX
+export LESS=-FIRSX
 export MAVEN_HOME=/usr/local/opt/maven/libexec
 
 if [ -f ~/.brew_gh_api_token ]; then
