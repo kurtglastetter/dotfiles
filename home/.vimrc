@@ -59,6 +59,7 @@ autocmd FileType  xml        set   et sts=2 sw=2 ts=8
 nnoremap \: 0y$:<c-r>"<lf>
 nnoremap \\ :noh<lf>
 
+nnoremap \G *N:grep '<c-r>/'
 nnoremap \g *N:grep '<c-r>/'<lf>
 
 nnoremap \m /\v^([<\|=>])\1{6}(\s.*)?$/<lf>
