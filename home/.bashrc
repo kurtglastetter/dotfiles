@@ -171,6 +171,7 @@ alias lla='ls -la'
 
 alias find=gfind
 alias locate=glocate
+alias tar=gtar
 alias updatedb=gupdatedb
 alias xargs=gxargs
 
