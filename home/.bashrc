@@ -52,6 +52,7 @@ PKGROOT_GIT=$(dirname $(dirname $(which git)))
 
 . $PKGROOT_GIT/etc/bash_completion.d/git-completion.bash
 . $PKGROOT_GIT/etc/bash_completion.d/git-prompt.sh
+complete -C aws_completer aws
 
 txtblk='\033[0;30m' # Black - Regular
 txtred='\033[0;31m' # Red
