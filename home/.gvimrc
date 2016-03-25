@@ -5,10 +5,10 @@ set guifont=Monaco:h10
 set visualbell t_vb=
 
 if &diff
-    set columns=188
-    set lines=65
+    set columns=224
+    set lines=60
 else
-    set columns=100
+    set columns=132
     set lines=40
 endif
 
