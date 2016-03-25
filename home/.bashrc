@@ -144,9 +144,7 @@ if [ "$PS1" ]; then
   PS1="$PS1"" $(uname)"
   PS1="$PS1$ps1_txtrst"
   PS1="$PS1"' $(smiley)'
-  PS1="$PS1$ps1_txtblu"' \D{%F}'
-  PS1="$PS1"' \T'
-  PS1="$PS1"' \D{%Z}'
+  PS1="$PS1$ps1_txtblu"' \D{%Y-%m-%d %H:%M:%S %Z}'
   PS1="$PS1$ps1_txtrst"
   PS1="$PS1"' '"$ps1_txtylw"'\w'
   PS1="$PS1$ps1_txtrst"
