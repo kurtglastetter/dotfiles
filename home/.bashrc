@@ -18,7 +18,11 @@ _wrap_cmd_str_arg () {
     # contains other characters that need quoting; surround in single quotes
     arg="'$arg'"
   fi
-  echo -n "$arg"
+
+  # ensure arg is not interpreted as flag to echo
+  [[ "$arg" =~ ^(-*)(.*) ]]
+  echo -n "${BASH_REMATCH[1]}"
+  echo -n "${BASH_REMATCH[2]}"
 }
 
 _wrap_cmd_str () {
