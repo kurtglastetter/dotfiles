@@ -9,18 +9,16 @@ HISTIGNORE='ls:bg:fg:history:pwd'
 PROMPT_COMMAND='history -a'
 
 wrap_cmd_str_arg () {
-  local output=
-  if [[ "$1" =~ "'" ]]; then
+  local arg="$1"
+  if [[ "$arg" =~ "'" ]]; then
     # contains single quotes; surround in double-quotes, quoting any existing
     # double-quotes or backslashes
-    output='"'$(<<<"$1" sed 's/\(["\\]\)/\\\1/g')'"'
-  elif [[ "$1" =~ [^+\-./0-9:=@A-Z^_a-z] ]]; then
+    arg="\"$(<<<"$arg" sed 's/\(["\\]\)/\\\1/g')\""
+  elif [[ "$arg" =~ [^+\-./0-9:=@A-Z^_a-z] ]]; then
     # contains other characters that need quoting; surround in single quotes
-    output="'$1'"
-  else
-    output="$1"
+    arg="'$arg'"
   fi
-  echo -n "$output"
+  echo -n "$arg"
 }
 
 wrap_cmd_str () {
