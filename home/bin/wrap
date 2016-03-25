@@ -1,0 +1,10 @@
+#!/bin/bash
+
+_wrap_src="$HOME"/.wrap.bash
+
+. "$_wrap_src" || {
+  echo >&2 "wrap: error: could not source $_wrap_src"
+  exit 2
+}
+
+_wrap "$@"
