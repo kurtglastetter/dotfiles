@@ -8,7 +8,7 @@ HISTCONTROL=ignoreboth
 HISTIGNORE='ls:bg:fg:history:pwd'
 PROMPT_COMMAND='history -a'
 
-wrap_cmd_str_arg () {
+_wrap_cmd_str_arg () {
   local arg="$1"
   if [[ "$arg" =~ "'" ]]; then
     # contains single quotes; surround in double-quotes, quoting any existing
@@ -21,18 +21,18 @@ wrap_cmd_str_arg () {
   echo -n "$arg"
 }
 
-wrap_cmd_str () {
-  wrap_cmd_str_arg "$1"
+_wrap_cmd_str () {
+  _wrap_cmd_str_arg "$1"
   shift
   for a in "$@"; do
     echo -n ' '
-    wrap_cmd_str_arg "$a"
+    _wrap_cmd_str_arg "$a"
   done
   echo ''
 }
 
 wrap () {
-  local wrap_cmd_str=$(wrap_cmd_str "$@")
+  local wrap_cmd_str=$(_wrap_cmd_str "$@")
   echo >&2 "    [$wrap_cmd_str]"
   "$@"
   local errno=$?
