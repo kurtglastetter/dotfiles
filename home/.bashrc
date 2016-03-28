@@ -18,8 +18,12 @@ fi
 
 PKGROOT_GIT=$(dirname $(dirname $(which git)))
 
-. $PKGROOT_GIT/etc/bash_completion.d/git-completion.bash
-. $PKGROOT_GIT/etc/bash_completion.d/git-prompt.sh
+if [ -f "$PKGROOT_GIT"/etc/bash_completion.d/git-completion.bash ]; then
+  . "$PKGROOT_GIT"/etc/bash_completion.d/git-completion.bash
+fi
+if [ -f "$PKGROOT_GIT"/etc/bash_completion.d/git-prompt.sh ]; then
+  . "$PKGROOT_GIT"/etc/bash_completion.d/git-prompt.sh
+fi
 complete -C aws_completer aws
 
 txtblk='\033[0;30m' # Black - Regular
