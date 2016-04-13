@@ -56,6 +56,9 @@ autocmd FileType  ruby       set   et sts=2 sw=2 ts=8
 autocmd FileType  sh         set   et sts=2 sw=2 ts=8
 autocmd FileType  xml        set   et sts=2 sw=2 ts=8
 
+nnoremap <c-]> g<c-]>
+vnoremap <c-]> g<c-]>
+
 nnoremap \: 0y$:<c-r>"<lf>
 nnoremap \\ :noh<lf>
 
