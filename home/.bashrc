@@ -149,4 +149,10 @@ alias xargs=gxargs
 alias showFiles='defaults write com.apple.finder AppleShowAllFiles YES; killall Finder /System/Library/CoreServices/Finder.app'
 alias hideFiles='defaults write com.apple.finder AppleShowAllFiles NO; killall Finder /System/Library/CoreServices/Finder.app'
 
+alias_cd_pushd () {
+  alias cd"$1"="cd '$2'"
+  alias pushd"$1"="pushd '$2'"
+}
+
+alias_cd_pushd code ~/Code
 # vim: et:sts=2:sw=2:ts=8:tw=79
