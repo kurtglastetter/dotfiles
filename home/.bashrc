@@ -6,6 +6,7 @@ HISTSIZE=$((1024*1024))
 HISTFILESIZE=$((32*HISTSIZE))
 HISTCONTROL=ignoreboth
 HISTIGNORE='ls:bg:fg:history:pwd'
+HISTTIMEFORMAT='%Y-%m-%dT%H:%M:%S%z  '
 PROMPT_COMMAND='history -a'
 
 if [ -f ~/.wrap.bash ]; then
