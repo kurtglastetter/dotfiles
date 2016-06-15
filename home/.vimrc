@@ -34,7 +34,7 @@ set patchmode=
 set path^=.,,
 
 " grep
-set grepprg=grep\ -EHIirn\ $*\ *
+set grepprg=grep\ -EHIirn
 
 if &diff
     colo eclipse
@@ -63,7 +63,7 @@ nnoremap \: 0y$:<c-r>"<lf>
 nnoremap \\ :noh<lf>
 
 nnoremap \G *N:grep '<c-r>/'
-nnoremap \g *N:grep '<c-r>/'<lf>
+nnoremap \g *N:grep '<c-r>/' *<lf>
 
 nnoremap \m /\v^([<\|=>])\1{6}(\s.*)?$/<lf>
 
